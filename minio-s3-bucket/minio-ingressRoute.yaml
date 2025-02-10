@@ -1,0 +1,19 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: minio-dev-ingress
+  namespace: minio-dev
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`minio-dev.k8s.local.com`)
+      kind: Rule
+      services:
+        - name: minio-dev-service
+          port: 9000
+    - match: Host(`minio-dev-console.k8s.local.com`)
+      kind: Rule
+      services:
+        - name: minio-dev-service
+          port: 9090
