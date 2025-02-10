@@ -4,7 +4,7 @@ metadata:
   labels:
     app: block-buster
   name: block-buster-service
-  namespace: 3-demo
+  namespace: 4-demo
 spec:
   ports:
   - port: 80
@@ -13,6 +13,6 @@ spec:
     nodePort: 30003
   selector:
     app: block-buster
-    version: 7.3.0
+    version: 7.4.0
     env: dev
   type: NodePort
