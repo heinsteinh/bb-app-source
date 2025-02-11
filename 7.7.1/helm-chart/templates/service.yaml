@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: block-buster-helm-app
+  name: block-buster-helm-7-7-1
   labels:
     app: {{ .Values.labels.app.name }}
 spec:
